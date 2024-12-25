@@ -24,6 +24,7 @@ lottie_girlie = "https://lottie.host/b27470ff-d11b-414d-8d89-6dbfc6fca337/Monk1R
 image_char = Image.open("images/githubsticker.png")
 image_p1 = Image.open("images/Project1.png")
 image_p2 = Image.open("images/Project2.png")
+image_p3 = Image.open("images/Project3.jpg")
 
 # ----- HEADER SECTION -----
 with st.container():
@@ -42,15 +43,15 @@ with st.container():
         # st.write(":wink:")
         st.write("[Check out my github > ](https://github.com/G5277)")
 
-# ---- WHAT I DO ----
+# ---- WHAT AM I LEARNING ----
 with st.container():
     st.write("---")
     left_column, right_column = st.columns((2,1))
     with left_column:
-        st.header("What I do", divider="blue")
+        st.header("Something about me :eyes:", divider="blue")
         st.write(
             """
-            Currently, I am a pre-final year student at Thapar Institute of Engineering and Technology:            
+            Currently, a pre-final year student at Thapar Institute of Engineering and Technology:            
             - I am studying Data Science in R
             - Trying to get comfortable with Pytorch - a python framework for Deep Learning
             - Doing some projects using Streamlit
@@ -62,7 +63,7 @@ with st.container():
             """
         )
 
-        st.write("[Email me : )](mailto:2580gazal@gmail.com)")
+        st.write("[Email me :email:](mailto:2580gazal@gmail.com)")
 
     with right_column:
         st.write(" ")
@@ -73,7 +74,7 @@ with st.container():
 # ----- PROJECTS -----
 with st.container():
     st.write("---")
-    st.header("My Projects", divider=True)
+    st.header("My Projects 👩‍💻", divider=True)
 
 
     # Project 1    
@@ -129,7 +130,7 @@ with st.container():
         with image_column:
             st.write(" ")
             st.write(" ")
-            st.image(image_p2, width=300)
+            st.image(image_p3, width=300)
 
         with text_column:
             st.write(" ")
@@ -137,9 +138,10 @@ with st.container():
             st.subheader("Smart Health Recognition")
             st.write(
                 """
-                - Built a handwritten digit recognition system achieving a classification accuracy of 98.9% on the MNIST dataset
-                - Trained the model on 60,000 training images, achieving a loss of 0.02 and validating the model on 10,000 test images
-                - Designed and implemented a real-time, interactive front-end in Pygame allowing users to draw digits and receive predictions instantly with a prediction time of under 500 ms
+                - Developed a Smart Healthcare Diagnosis System achieving an ensemble model accuracy of 98.64%, reducing false negatives by 15% in healthcare diagnostics.
+                - Designed and implemented an ensemble learning approach using Logistic Regression meta-model, combining XGBoost (~98% accuracy) and ANN (~96.79% accuracy) predictions to improve classification reliability.
+                - Curated a synthetic dataset with 10+ key attributes to simulate real-world scenarios, improving data availability by 100%.
+                - Addressed class imbalance by using SMOTE, oversampling underrepresented classes by 50%, which enhanced model performance on minority classes by 30%.
                 """
             )
             st.markdown(
@@ -147,27 +149,27 @@ with st.container():
             st.write(" ")
             st.write(" ")
 
-    # Project 4
-    with st.container():
-        text_column, empty_column, image_column = st.columns((2, 0.3,0.7))
+    # # Project 4
+    # with st.container():
+    #     text_column, empty_column, image_column = st.columns((2, 0.3,0.7))
 
-        with image_column:
-            st.write(" ")
-            st.write(" ")
-            st.image(image_p1, width=300)
+    #     with image_column:
+    #         st.write(" ")
+    #         st.write(" ")
+    #         st.image(image_p1, width=300)
 
-        with text_column:
-            st.write(" ")
-            st.write(" ")
-            st.subheader("ASL Detector")
-            st.write(
-                """
-                - Developed a real-time American Sign Language (ASL) gesture recognition system Trained a machine learning model to classify hand gestures with an accuracy of 92.1 percent
-                - Optimized model performance by pre-processing over 5,000 frames of video data, including resizing, normalization, and augmentation, improving gesture detection reliability by 15%                """
-            )
-            st.markdown(
-                "[Visit the Source Code ~](https://github.com/G5277/ASL-Detector)")
-
+    #     with text_column:
+    #         st.write(" ")
+    #         st.write(" ")
+    #         st.subheader("ASL Detector")
+    #         st.write(
+    #         """
+    #             - Developed a real-time American Sign Language (ASL) gesture recognition system Trained a machine learning model to classify hand gestures with an accuracy of 92.1 percent
+    #             - Optimized model performance by pre-processing over 5,000 frames of video data, including resizing, normalization, and augmentation, improving gesture detection reliability by 15%                
+    #         """
+    #         )
+    #         st.markdown(
+    #             "[Visit the Source Code ~](https://github.com/G5277/ASL-Detector)")
 
 # ----- CONTACT FORM -----
 with st.container():
@@ -188,3 +190,4 @@ with st.container():
         st.markdown(contact_form, unsafe_allow_html = True)
     with right_column:
         st.empty()
+
