@@ -15,7 +15,12 @@ def load_lottieurl(url):
         return None
     return r.json()
 
+# ----- Use Local CSS -----
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
+local_css("./style/style.css")
 # ----- LOAD ASSETS -----
 lottie_girlie = "https://lottie.host/b27470ff-d11b-414d-8d89-6dbfc6fca337/Monk1RKL50.json"
 image_char = Image.open("images/githubsticker.png")
@@ -170,8 +175,6 @@ with st.container():
 with st.container():
     st.write("---")
     st.header("Get in touch with me!")
-    st.write("##")
-
     contact_form = """
     <form action="https://formsubmit.co/2580gazal@gmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
@@ -187,3 +190,5 @@ with st.container():
         st.markdown(contact_form, unsafe_allow_html = True)
     with right_column:
         st.empty()
+
+    
