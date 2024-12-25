@@ -7,8 +7,6 @@ from streamlit_lottie import st_lottie
 st.set_page_config(page_title=" Portfolio ", page_icon=":star:", layout="wide")
 
 # ----- FUNCTIONS ------
-
-
 def load_lottieurl(url):
     r = requests.get(url)
     if r.status_code != 200:
@@ -190,5 +188,3 @@ with st.container():
         st.markdown(contact_form, unsafe_allow_html = True)
     with right_column:
         st.empty()
-
-    
