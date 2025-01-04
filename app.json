@@ -1,6 +1,0 @@
-{
-    "scripts": {
-      "postdeploy": "sh setup.sh"
-    }
-  }
-  
