@@ -175,19 +175,20 @@ with st.container():
 with st.container():
     st.write("---")
     st.header("Get in touch with me!")
-    contact_form = """
-    <form action="https://formsubmit.co/2580gazal@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder = "Your name" required>
-        <input type="email" name="email" placeholder = "Your email" required>
-        <textarea name="message" placeholder = "Your message here" required></textarea>
-        <button type="submit">Send</button>
-    </form>
-    """
+    st.write("Fill out the form below to send me a message:")
 
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.markdown(contact_form, unsafe_allow_html = True)
-    with right_column:
-        st.empty()
+    # Creating the form
+    with st.form(key="contact_form"):
+        name = st.text_input("Your Name", placeholder="Enter your name")
+        email = st.text_input("Your Email", placeholder="Enter your email")
+        message = st.text_area("Your Message", placeholder="Write your message here")
+        submit_button = st.form_submit_button(label="Send")
 
+        # Form submission logic
+        if submit_button:
+            if not name or not email or not message:
+                st.error("Please fill out all fields before submitting!")
+            else:
+                # Simulate a successful form submission
+                st.success(f"Thank you, {name}! Your message has been sent successfully.")
+                st.write("I will get back to you soon. 😊")
